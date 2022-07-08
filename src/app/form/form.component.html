@@ -1,0 +1,10 @@
+<div class="container" width="300px" height="400px" style="border:1px solid gray;padding:10px">
+    <h3 style="color:blue"><i>form validation example</i></h3>
+    <form #loginForm="ngForm" (ngsubmit)="loginUser(loginForm.value)">
+        <input type="text" name="username" id="" required placeholder="enter your username" #user="ngModel" ngModel> <br>
+        <span *ngIf="user.invalid && user.touched" style="color: red;" >enter valid input</span><br>
+        <input type="password" name="password" id="" required placeholder="enter your password" #pass="ngModel" ngModel> <br>
+        <span *ngIf="pass.invalid && pass.touched" style="color: red;">enter correct password</span><br>
+        <button [disabled]="loginForm.invalid">Login</button>
+    </form>
+</div>

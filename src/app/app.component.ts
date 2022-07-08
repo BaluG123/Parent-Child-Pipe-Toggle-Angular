@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Week3';
+  Number=10;
+  updateNumber(){
+    this.Number=Math.floor(Math.random()*20)
+  }
+  data='';
+  updateData(item:string){
+    console.warn(item)
+    this.data=item
+  }
+
+  Name:any;
+
+  user={
+    name:'balu',
+    age:22
+  }
+
+  today=Date()
 }
